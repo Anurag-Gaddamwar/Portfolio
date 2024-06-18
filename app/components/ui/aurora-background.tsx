@@ -1,4 +1,4 @@
-"use client"; // Enable client-side rendering
+
 import { cn } from "@/app/utils/cn";
 import React, { ReactNode } from "react";
 import { HTMLMotionProps, motion } from 'framer-motion'; // Import framer-motion

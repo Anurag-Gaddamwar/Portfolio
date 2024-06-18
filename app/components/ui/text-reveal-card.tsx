@@ -1,22 +1,23 @@
-"use client";
 import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/app/utils/cn";
+
+interface TextRevealCardProps {
+  text: string;
+  revealText: string;
+  children?: React.ReactNode;
+  className?: string;
+}
 
 export const TextRevealCard = ({
   text,
   revealText,
   children,
   className,
-}: {
-  text: string;
-  revealText: string;
-  children?: React.ReactNode;
-  className?: string;
-}) => {
+}: TextRevealCardProps) => {
   const [widthPercentage, setWidthPercentage] = useState(0);
-  const cardRef = useRef<HTMLDivElement | any>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const [left, setLeft] = useState(0);
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -30,7 +31,7 @@ export const TextRevealCard = ({
     }
   }, []);
 
-  function mouseMoveHandler(event: any) {
+  function mouseMoveHandler(event: React.MouseEvent<HTMLDivElement>) {
     event.preventDefault();
 
     const { clientX } = event;
@@ -44,12 +45,14 @@ export const TextRevealCard = ({
     setIsMouseOver(false);
     setWidthPercentage(0);
   }
+
   function mouseEnterHandler() {
     setIsMouseOver(true);
   }
+
   function touchMoveHandler(event: React.TouchEvent<HTMLDivElement>) {
     event.preventDefault();
-    const clientX = event.touches[0]!.clientX;
+    const clientX = event.touches[0].clientX;
     if (cardRef.current) {
       const relativeX = clientX - left;
       setWidthPercentage((relativeX / localWidth) * 100);
@@ -67,13 +70,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#1d1c20] border border-white/[0.08] w-full rounded-lg p-8 relative overflow-hidden",
+        "bg-[#1d1c20] border border-white/[0.08] w-full p-8 relative overflow-hidden",
         className
       )}
     >
       {children}
 
-      <div className="h-20 justify-center text-xl sm:text-[3rem]  relative flex items-center overflow-hidden">
+      <div className="h-20 justify-center text-xl sm:text-[3rem] relative flex items-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
@@ -89,13 +92,13 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#1d1c20] z-20  will-change-transform"
+          className="absolute bg-[#1d1c20] z-20 will-change-transform"
         >
           <p
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className=" text-x justify-center sm:text-[3rem]  flex py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-xl justify-center sm:text-[3rem] flex py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
           >
             {revealText}
           </p>
@@ -110,7 +113,7 @@ export const TextRevealCard = ({
           className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
-        <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+        <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
           <p className="text-xl sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#4d4d4d]">
             {text}
           </p>
@@ -121,13 +124,15 @@ export const TextRevealCard = ({
   );
 };
 
+interface TextRevealCardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
 export const TextRevealCardTitle = ({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+}: TextRevealCardTitleProps) => {
   return (
     <h2 className={twMerge("text-white text-lg mb-2", className)}>
       {children}
@@ -135,13 +140,15 @@ export const TextRevealCardTitle = ({
   );
 };
 
+interface TextRevealCardDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
 export const TextRevealCardDescription = ({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+}: TextRevealCardDescriptionProps) => {
   return (
     <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
   );
@@ -157,8 +164,8 @@ const Stars = () => {
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
+            top: `calc(${random()} * 100% + ${randomMove()}px)`,
+            left: `calc(${random()} * 100% + ${randomMove()}px)`,
             opacity: randomOpacity(),
             scale: [1, 1.2, 0],
           }}
