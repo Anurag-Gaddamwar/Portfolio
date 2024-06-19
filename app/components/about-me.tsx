@@ -26,19 +26,19 @@ return (
 <div className="mt-2 font-mono tracking-widest text-base mx-16">
 <AboutHeader />
 <AboutParagraph>
-Hey there,  Anurag Gaddamwar, a final-year Computer Science and Design student fueled by a passion for blending technology and creativity. I thrive at the intersection of logic and aesthetics, where lines of code create captivating experiences.
+Hey there, I am Anurag Gaddamwar, a final-year Computer Science and Design student fueled by a passion for blending technology and creativity. I thrive at the intersection of logic and aesthetics, where lines of code create captivating experiences.
 </AboutParagraph>
 
 vbnet
 Copy code
   <AboutParagraph>
-    With a curious mind and an open heart,  a lifelong learner constantly exploring new frontiers. My journey includes:
+    With a curious mind and an open heart, I am a lifelong learner constantly exploring new frontiers. My journey includes:
   </AboutParagraph>
 
   <AboutSkills />
 
   <AboutParagraph>
-     eager to kickstart my career as a front-end developer, with an eye towards becoming a full-stack wizard in the future. My goal? To create impactful digital solutions that seamlessly merge functionality and beauty.
+    I am eager to kickstart my career as a front-end developer, with an eye towards becoming a full-stack wizard in the future. My goal? To create impactful digital solutions that seamlessly merge functionality and beauty.
   </AboutParagraph>
 </div>
 );
