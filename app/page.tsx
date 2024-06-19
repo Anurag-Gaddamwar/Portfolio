@@ -60,8 +60,10 @@ export default function Home() {
               icon={<i className="fas fa-robot"></i>}
               image="cypher.png"
               carouselItems={[ // Add carousel items here
-                { image: "cypher.png", caption: "Caption for Image 1" },
-                { image: "cypher.png", caption: "Caption for Image 2" },
+                { image: "c1.png", caption: "Caption for Image 1" },
+                { image: "c2.png", caption: "Caption for Image 1" },
+                { image: "c3.png", caption: "Caption for Image 1" },
+                { image: "c4.png", caption: "Caption for Image 1" },
               ]}
             />
             <BentoGridItem 
