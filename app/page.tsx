@@ -31,7 +31,7 @@ export default function Home() {
       <TextRevealCard text="Web Developer" revealText="Web Designer" />
       <div className="mt-8">
         <TracingBeam {...{ svgHeight: aboutHeight }}>
-          <About className="mt-2" />
+          <About />
           <Skills />
         </TracingBeam>
       </div>

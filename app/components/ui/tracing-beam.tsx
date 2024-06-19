@@ -48,7 +48,7 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full max-w-4xl mx-auto h-full", className)}
+      className={cn("relative w-full max-w-4xl mx-auto h-full pt-1", className)}
       style={{ position: 'relative' }} // Ensure position is explicitly set to relative
     >
       <div className="absolute -left-4 md:-left-20 top-3">
