@@ -32,10 +32,10 @@ const About: React.FC<AboutProps> = ({ className }) => {
     <div className="mt-2 font-mono tracking-widest ml-10 mr-8">
       <AboutHeader />
       <AboutParagraph>
-        Hello, I'm Anurag Gaddamwar, a final-year Computer Science and Design student passionate about merging technology with creativity. I enjoy crafting captivating digital experiences through code.
+        Hello, I am Anurag Gaddamwar, a final-year Computer Science and Design student passionate about merging technology with creativity. I enjoy crafting captivating digital experiences through code.
       </AboutParagraph>
       <AboutParagraph>
-        I'm a lifelong learner with a curious mind, constantly exploring new frontiers. My journey includes:
+        I am a lifelong learner with a curious mind, constantly exploring new frontiers. My journey includes:
       </AboutParagraph>
       <AboutSkills />
       <AboutParagraph>
