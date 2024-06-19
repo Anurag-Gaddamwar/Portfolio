@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/app/utils/cn";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaLinkedin, FaGithub } from 'react-icons/fa';  // For Font Awesome icons
+
 
 interface TextRevealCardProps {
   text: string;
@@ -120,6 +123,17 @@ export const TextRevealCard = ({
           <MemoizedStars />
         </div>
       </div>
+
+      {/* Icons section */}
+      <div className="flex justify-center mt-4 space-x-4">
+  <a href="https://www.linkedin.com/in/anurag-gaddamwar/" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin size="2x" className="text-white w-4 hover:text-[#0e76a8]" /> 
+  </a>
+  <a href="https://github.com/Anurag-Gaddamwar" target="_blank" rel="noopener noreferrer">
+    <FaGithub size="2x" className="text-white w-4 hover:text-[#4d4c4c]" /> 
+  </a>
+</div>
+
     </div>
   );
 };

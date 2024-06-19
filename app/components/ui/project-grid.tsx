@@ -91,32 +91,33 @@ export const BentoGridItem = ({
         ref={triggerRef}
         onClick={togglePopup}
         className={cn(
-            "md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto cursor-pointer row-span-1 ml-10 mr-8 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border-white/[0.1] bg-black border justify-between flex flex-col space-y-4",
+            "md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-xl mx-auto cursor-pointer row-span-1 ml-10 mr-8 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border-white/[0.1] bg-black border justify-between flex flex-col space-y-4",
           className
           
         )}
       >
         {header}
-        <div className="group-hover/bento:translate-x-2 transition duration-200 flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
             {icon}
-            <div className="font-mono font-bold text-neutral-200 mb-2 ml-2">
+            <div className="font-mono font-bold text-neutral-200 text-xl ml-2">
               {title}
             </div>
           </div>
           {image && <img src={image} alt={`${title} logo`} className="w-10 h-10 rounded-full" />}
         </div>
-        <div className="font-mono ml-2 font-normal text-neutral-600 text-xs dark:text-neutral-300">
+        <div className="font-mono ml-2 font-normal text-neutral-600 text-sm dark:text-neutral-300">
           {description}
+          <h5 className="text-neutral-400 text-xs">click here to learn more</h5>
         </div>
         {/* Carousel */}
         {carouselItems && (
-  <div onClick={handleCarouselClick}>
+  <div className="cursor-default" onClick={handleCarouselClick}>
     <Carousel showArrows={true} showThumbs={false}> 
       {carouselItems.map((item, index) => (
         <div key={index}>
           <img style={{ width: '100%'}} src={item.image} alt={`Image ${index + 1}`} />
-          <p className="legend hidden sm:block">{item.caption}</p>
+          <p className="legend hidden  sm:block">{item.caption}</p>
         </div>
       ))}
     </Carousel>
