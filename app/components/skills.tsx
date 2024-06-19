@@ -135,12 +135,12 @@ const skillCategories: SkillCategories = {
 
 const Skills: React.FC = () => {
   return (
-    <div className="mt-12 mx-16 font-mono tracking-widest">
+    <div className="mt-12 ml-10 mr-8 font-mono tracking-widest">
       <h1 className="text-sky-300 text-2xl md:text-3xl mb-8">Skills</h1>
       <div className="space-y-8">
         {Object.entries(skillCategories).map(([category, skills], index) => (
           <div key={index}>
-            <h2 className="text-gray-400 text-base mb-4">{category}</h2>
+            <h2 className="text-gray-400 text-sm mb-4">{category}</h2>
             <div className="flex flex-wrap gap-4">
               {skills.map((skill, skillIndex) => (
                 <SkillCard

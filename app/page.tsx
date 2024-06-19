@@ -5,6 +5,9 @@ import { AuroraBackground } from "./components/ui/aurora-background";
 import { TextRevealCard } from "./components/ui/text-reveal-card";
 import About from "./components/about-me";
 import Skills from "./components/skills";
+import { BackgroundBeams } from "./components/ui/background-beam";
+
+
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -19,14 +22,19 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen w-screen flex-col items-center relative">
-      <div className="rounded-xl w-full sm:text-5xl tracking-widest font-mono text-4xl h-40 z-10">
+
+      <div className="rounded-xl w-full sm:text-5xl tracking-widest font-mono text-4xl sm:h-32 z-10">
         <AuroraBackground>ANURAG GADDAMWAR</AuroraBackground>
       </div>
+      <BackgroundBeams className="absolute top-0 w-full h-full mb-40" />
+
       <TextRevealCard text="Web Developer" revealText="Web Designer" />
-      <TracingBeam {...{ svgHeight: aboutHeight }}>
-        <About/>
-        <Skills />
-      </TracingBeam>
+      <div className="mt-8">
+        <TracingBeam {...{ svgHeight: aboutHeight }}>
+          <About className="mt-2" />
+          <Skills />
+        </TracingBeam>
+      </div>
     </main>
   );
 }
