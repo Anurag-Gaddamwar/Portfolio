@@ -1,11 +1,11 @@
 'use client';
+import { cn } from "@/app/utils/cn";
 import React, { useRef, useEffect, useState } from "react";
 import { TracingBeam } from "./components/ui/tracing-beam"; 
 import { AuroraBackground } from "./components/ui/aurora-background";
 import { TextRevealCard } from "./components/ui/text-reveal-card";
 import About from "./components/about-me";
 import Skills from "./components/skills";
-// import { BackgroundBeams } from "./components/ui/background-beam";
 import { BentoGrid, BentoGridItem } from "./components/ui/project-grid";
 
 export default function Home() {
@@ -24,7 +24,6 @@ export default function Home() {
       <div className="rounded-xl w-full sm:text-5xl tracking-widest font-mono text-4xl sm:h-32 z-10">
         <AuroraBackground>ANURAG GADDAMWAR</AuroraBackground>
       </div>
-      {/* <BackgroundBeams className="absolute top-0 w-full h-full mb-40" /> */}
       <TextRevealCard text="Web Developer" revealText="Web Designer" />
       <div className="mt-8">
         <TracingBeam {...{ svgHeight: aboutHeight }}>
@@ -39,17 +38,17 @@ export default function Home() {
                 <>
                   <ul className="list-disc text-sm text-justify">
                     <li>
-                      Implemented an interactive chatbot (both text-based and voice-based) utilizing the Gemini API to provide 
+                      Implemented an interactive chatbot (both text-based and voice-based) utilizing the Gemini API to provide
                       personalized responses and guidance for technical and interpersonal interview questions.
                     </li>
                     <li>
-                      Developed a resume analysis feature that accepts job roles and resumes (in PDF or image format) from users. 
-                      This feature extracts text from uploaded documents and uses the Gemini API to evaluate resumes against specific 
-                      job roles, offering detailed feedback including ATS (Applicant Tracking System) compatibility scores, structure 
+                      Developed a resume analysis feature that accepts job roles and resumes (in PDF or image format) from users.
+                      This feature extracts text from uploaded documents and uses the Gemini API to evaluate resumes against specific
+                      job roles, offering detailed feedback including ATS (Applicant Tracking System) compatibility scores, structure
                       analysis, and content relevance scores.
                     </li>
                     <li>
-                      <span className="font-semibold">Outcome:</span> Created a comprehensive tool that empowers job seekers with tailored interview practice 
+                      <span className="font-semibold">Outcome:</span> Created a comprehensive tool that empowers job seekers with tailored interview practice
                       and resume enhancement suggestions, significantly increasing their chances of success in the job application process.
                     </li>
                     <li>
@@ -60,6 +59,10 @@ export default function Home() {
               }
               icon={<i className="fas fa-robot"></i>}
               image="cypher.png"
+              carouselItems={[ // Add carousel items here
+                { image: "cypher.png", caption: "Caption for Image 1" },
+                { image: "cypher.png", caption: "Caption for Image 2" },
+              ]}
             />
             <BentoGridItem 
               title="EVOLVE" 
@@ -68,17 +71,17 @@ export default function Home() {
                 <>
                   <ul className="list-disc text-sm text-justify">
                     <li>
-                      Developed a web application designed to streamline content creation by summarizing audience feedback 
+                      Developed a web application designed to streamline content creation by summarizing audience feedback
                       from YouTube comments and providing data-driven recommendations to creators.
                     </li>
                     <li>
-                      Integrated the Gemini API and YouTube Data API to collect and evaluate comments, highlighting key insights 
-                      and understanding audience perceptions. Features were developed to identify and filter out spam and abusive 
+                      Integrated the Gemini API and YouTube Data API to collect and evaluate comments, highlighting key insights
+                      and understanding audience perceptions. Features were developed to identify and filter out spam and abusive
                       comments, ensuring that creators receive only relevant and constructive feedback.
                     </li>
                     <li>
-                      <span className="font-semibold">Outcome:</span> Created a powerful tool that enables creators to understand audience sentiment, identify 
-                      areas for improvement, receive content recommendations, and maintain a positive comment section. This 
+                      <span className="font-semibold">Outcome:</span> Created a powerful tool that enables creators to understand audience sentiment, identify
+                      areas for improvement, receive content recommendations, and maintain a positive comment section. This
                       enhances content quality and viewer engagement.
                     </li>
                     <li>
@@ -89,6 +92,10 @@ export default function Home() {
               }
               icon={<i className="fas fa-video"></i>}
               image="evolve.png"
+              carouselItems={[ // Add carousel items here
+                { image: "evolve.png", caption: "Caption for Image 1" },
+                { image: "evolve.png", caption: "Caption for Image 2" },
+              ]}
             />
           </BentoGrid>
         </TracingBeam>
