@@ -93,8 +93,14 @@ export default function Home() {
               icon={<i className="fas fa-video"></i>}
               image="evolve.png"
               carouselItems={[ // Add carousel items here
-                { image: "evolve.png", caption: "Caption for Image 1" },
-                { image: "evolve.png", caption: "Caption for Image 2" },
+                { image: "e7.png", caption: "Caption for Image 1" },
+                { image: "e6.png", caption: "Caption for Image 1" },
+                { image: "e5.png", caption: "Caption for Image 1" },
+                { image: "e4.png", caption: "Caption for Image 1" },
+                { image: "e3.png", caption: "Caption for Image 1" },
+                { image: "e2.png", caption: "Caption for Image 1" },
+                { image: "e1.png", caption: "Caption for Image 1" },
+
               ]}
             />
           </BentoGrid>

@@ -106,7 +106,7 @@ export const BentoGridItem = ({
           </div>
           {image && <img src={image} alt={`${title} logo`} className="w-10 h-10 rounded-full" />}
         </div>
-        <div className="font-mono pb-10 ml-2 font-normal text-neutral-600 text-xs dark:text-neutral-300">
+        <div className="font-mono ml-2 font-normal text-neutral-600 text-xs dark:text-neutral-300">
           {description}
         </div>
         {/* Carousel */}
@@ -115,8 +115,8 @@ export const BentoGridItem = ({
     <Carousel showArrows={true} showThumbs={false}> 
       {carouselItems.map((item, index) => (
         <div key={index}>
-          <img style={{ width: '50%', maxWidth: '100%' }} src={item.image} alt={`Image ${index + 1}`} />
-          <p className="legend hidden sm:display">{item.caption}</p>
+          <img style={{ width: '100%'}} src={item.image} alt={`Image ${index + 1}`} />
+          <p className="legend hidden sm:block">{item.caption}</p>
         </div>
       ))}
     </Carousel>
