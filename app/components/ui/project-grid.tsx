@@ -108,7 +108,7 @@ export const BentoGridItem = ({
         </div>
         <div className="font-mono ml-2 font-normal text-neutral-600 text-sm dark:text-neutral-300">
           {description}
-          <h5 className="text-neutral-400 text-xs">click here to learn more</h5>
+          <h5 className="text-neutral-400 text-xs hover:text-neutral-300">click here to learn more</h5>
         </div>
         {/* Carousel */}
         {carouselItems && (
