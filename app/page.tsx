@@ -31,6 +31,22 @@ export default function Home() {
           <Skills />
           <h1 className="text-sky-300 font-mono tracking-widest mt-10 text-2xl md:text-3xl mx-10 mb-10">Projects</h1>
           <BentoGrid>
+          <BentoGridItem 
+              title="PORTFOLIO" 
+              description="My Portfolio Website" 
+              detailedDescription={
+                <>
+                  <p className="text-sm text-justify">
+                  </p>
+                </>
+              }
+              icon={<i className="fas fa-video"></i>}
+              image="portfolio.png"
+              carouselItems={[ // Add carousel items here
+                { image: "p1.png", caption: "" }
+
+              ]}
+            />
             <BentoGridItem 
               title="Cypher AI" 
               description="AI-Powered Interview and Resume Preparation Platform" 
@@ -71,25 +87,10 @@ export default function Home() {
               description="YouTube Optimizer" 
               detailedDescription={
                 <>
-                  <ul className="list-disc text-sm text-justify">
-                    <li>
-                      Developed a web application designed to streamline content creation by summarizing audience feedback
-                      from YouTube comments and providing data-driven recommendations to creators.
-                    </li>
-                    <li>
-                      Integrated the Gemini API and YouTube Data API to collect and evaluate comments, highlighting key insights
-                      and understanding audience perceptions. Features were developed to identify and filter out spam and abusive
-                      comments, ensuring that creators receive only relevant and constructive feedback.
-                    </li>
-                    <li>
-                      <span className="font-semibold">Outcome:</span> Created a powerful tool that enables creators to understand audience sentiment, identify
-                      areas for improvement, receive content recommendations, and maintain a positive comment section. This
-                      enhances content quality and viewer engagement.
-                    </li>
-                    <li>
-                      <span className="font-semibold">Tech Stack:</span> Next.js, MongoDB, Express.js, Node.js, React.js, Gemini API, YouTube Data API
-                    </li>
-                  </ul>
+                  <p className="text-sm text-justify">
+                  Evolve is a platform where content creators can streamline their content creation process by summarizing audience feedback from YouTube comments & receiving recommendations that would help them take data-driven decision.<br/><br/> The platform integrates the Gemini API and YouTube Data API to collect and evaluate the comments, highlighting key insights and understanding audience perceptions. Evolve includes features to identify and filter out spam and abusive comments, ensuring that creators receive only the most relevant and constructive feedback.
+                  <br/><br/>As a result, the platform enables creators to understand audience preferences, identify areas for improvement, receive content recommendations, and maintain a positive comment section. This ultimately enhances content quality and viewer engagement.<br/><br/><span className="font-semibold"> Tech Stack:</span> Next.js, MongoDB, Express.js, Node.js, React.js, Gemini API, and YouTube Data API.
+                  </p>
                 </>
               }
               icon={<i className="fas fa-video"></i>}
@@ -105,7 +106,9 @@ export default function Home() {
 
               ]}
             />
+            
           </BentoGrid>
+          
         </TracingBeam>
       </div>
     </main>

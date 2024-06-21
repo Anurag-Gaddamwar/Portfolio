@@ -91,7 +91,7 @@ export const BentoGridItem = ({
         ref={triggerRef}
         onClick={togglePopup}
         className={cn(
-            "md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-xl mx-auto cursor-pointer row-span-1 ml-10 mr-8 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border-white/[0.1] bg-black border justify-between flex flex-col space-y-4",
+            "md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-2xl mx-auto cursor-pointer row-span-1 ml-10 mr-8 rounded-xl hover:shadow-xl p-4 border-white/[0.1] border space-y-2",
           className
           
         )}
@@ -117,7 +117,7 @@ export const BentoGridItem = ({
       {carouselItems.map((item, index) => (
         <div key={index}>
           <img style={{ width: '100%'}} src={item.image} alt={`Image ${index + 1}`} />
-          <p className="legend hidden  sm:block">{item.caption}</p>
+          {/* <p className="legend hidden  sm:block">{item.caption}</p> */}
         </div>
       ))}
     </Carousel>
@@ -151,7 +151,7 @@ export const BentoGridItem = ({
               <div className="flex flex-col items-center">
                 {image && <img src={image} alt={`${title} image`} className="mb-4 rounded-lg w-20" />}
                 <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>
-                <div className="text-sm text-gray-300 dark:text-gray-400">{detailedDescription}</div>
+                <div className="text-sm text-slate-400">{detailedDescription}</div>
               </div>
             </motion.div>
           </motion.div>
