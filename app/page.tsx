@@ -7,7 +7,7 @@ import { TextRevealCard } from "./components/ui/text-reveal-card";
 import About from "./components/about-me";
 import Skills from "./components/skills";
 import { BentoGrid, BentoGridItem } from "./components/ui/project-grid";
-
+import Footer from "./components/Footer";
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const [aboutHeight, setAboutHeight] = useState<number>(0);
@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen w-screen flex-col items-center relative">
+    <main className="flex min-h-screen w-full flex-col items-center relative">
       <div className="rounded-xl w-full sm:text-5xl tracking-widest font-mono text-4xl sm:h-32 z-10">
         <AuroraBackground>ANURAG GADDAMWAR</AuroraBackground>
       </div>
@@ -47,7 +47,7 @@ export default function Home() {
               ]}
             />
             <BentoGridItem 
-              title="Cypher AI" 
+              title="CYPHER AI" 
               description="AI-Powered Interview and Resume Preparation Platform" 
               detailedDescription={
                 <>
@@ -92,7 +92,10 @@ export default function Home() {
             />
           </BentoGrid>
         </TracingBeam>
+        
+
       </div>
+      <Footer />
     </main>
   );
 }
