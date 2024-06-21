@@ -31,7 +31,7 @@ export default function Home() {
           <Skills />
           <h1 className="text-sky-300 font-mono tracking-widest mt-10 text-2xl md:text-3xl mx-10 mb-10">Projects</h1>
           <BentoGrid>
-          <BentoGridItem 
+            <BentoGridItem 
               title="PORTFOLIO" 
               description="My Portfolio Website" 
               detailedDescription={
@@ -42,9 +42,8 @@ export default function Home() {
               }
               icon={<i className="fas fa-video"></i>}
               image="portfolio.png"
-              carouselItems={[ // Add carousel items here
+              carouselItems={[ 
                 { image: "p1.png", caption: "" }
-
               ]}
             />
             <BentoGridItem 
@@ -52,30 +51,16 @@ export default function Home() {
               description="AI-Powered Interview and Resume Preparation Platform" 
               detailedDescription={
                 <>
-                  <ul className="list-disc text-sm text-justify">
-                    <li>
-                      Implemented an interactive chatbot (both text-based and voice-based) utilizing the Gemini API to provide
-                      personalized responses and guidance for technical and interpersonal interview questions.
-                    </li>
-                    <li>
-                      Developed a resume analysis feature that accepts job roles and resumes (in PDF or image format) from users.
-                      This feature extracts text from uploaded documents and uses the Gemini API to evaluate resumes against specific
-                      job roles, offering detailed feedback including ATS (Applicant Tracking System) compatibility scores, structure
-                      analysis, and content relevance scores.
-                    </li>
-                    <li>
-                      <span className="font-semibold">Outcome:</span> Created a comprehensive tool that empowers job seekers with tailored interview practice
-                      and resume enhancement suggestions, significantly increasing their chances of success in the job application process.
-                    </li>
-                    <li>
-                      <span className="font-semibold">Tech Stack:</span> Next.js, React, react-markdown, WebKitSpeech API, OCR, Express.js, Node.js, MongoDB, Gemini API
-                    </li>
-                  </ul>
+                  <p className="text-sm text-justify">
+                  Cypher AI is a platform where job seekers can enhance their interview preparation and resume quality by receiving personalized feedback and guidance. The platform integrates the Gemini API to implement an interactive chatbot that provides responses and guidance for technical and interpersonal interview questions. Additionally, Cypher AI includes a resume analysis feature that accepts job roles and resumes in PDF or image format. This feature extracts text from uploaded documents and evaluates resumes against specific job roles, offering detailed feedback such as ATS compatibility scores, structure analysis, and content relevance scores.
+                  <br/><br/>As a result, Cypher AI empowers job seekers with tailored interview practice and resume enhancement suggestions, significantly increasing their chances of success in the job application process. 
+                  <br/><br/><span className="font-semibold">Tech Stack:</span> Next.js, React.js, react-markdown, WebKitSpeech API, OCR, Express.js, Node.js, MongoDB, Gemini API.
+                  </p>
                 </>
               }
               icon={<i className="fas fa-robot"></i>}
               image="cypher.png"
-              carouselItems={[ // Add carousel items here
+              carouselItems={[ 
                 { image: "c1.png", caption: "Interview Assistant" },
                 { image: "c2.png", caption: "Resume Analyzer" },
                 { image: "c3.png", caption: "Resume Analysis Report" },
@@ -95,7 +80,7 @@ export default function Home() {
               }
               icon={<i className="fas fa-video"></i>}
               image="evolve.png"
-              carouselItems={[ // Add carousel items here
+              carouselItems={[ 
                 { image: "e7.png", caption: "Home Page" },
                 { image: "e6.png", caption: "Home Page" },
                 { image: "e5.png", caption: "YouTube Video Comment Analyzer" },
@@ -103,12 +88,9 @@ export default function Home() {
                 { image: "e3.png", caption: "Analysis Report" },
                 { image: "e2.png", caption: "Chatbot" },
                 { image: "e1.png", caption: "Profile page" },
-
               ]}
             />
-            
           </BentoGrid>
-          
         </TracingBeam>
       </div>
     </main>
