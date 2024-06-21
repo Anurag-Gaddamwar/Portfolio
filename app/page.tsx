@@ -60,10 +60,10 @@ export default function Home() {
               icon={<i className="fas fa-robot"></i>}
               image="cypher.png"
               carouselItems={[ // Add carousel items here
-                { image: "c1.png", caption: "Caption for Image 1" },
-                { image: "c2.png", caption: "Caption for Image 1" },
-                { image: "c3.png", caption: "Caption for Image 1" },
-                { image: "c4.png", caption: "Caption for Image 1" },
+                { image: "c1.png", caption: "Interview Assistant" },
+                { image: "c2.png", caption: "Resume Analyzer" },
+                { image: "c3.png", caption: "Resume Analysis Report" },
+                { image: "c4.png", caption: "Resume Analysis Report" },
               ]}
             />
             <BentoGridItem 
@@ -95,13 +95,13 @@ export default function Home() {
               icon={<i className="fas fa-video"></i>}
               image="evolve.png"
               carouselItems={[ // Add carousel items here
-                { image: "e7.png", caption: "Caption for Image 1" },
-                { image: "e6.png", caption: "Caption for Image 1" },
-                { image: "e5.png", caption: "Caption for Image 1" },
-                { image: "e4.png", caption: "Caption for Image 1" },
-                { image: "e3.png", caption: "Caption for Image 1" },
-                { image: "e2.png", caption: "Caption for Image 1" },
-                { image: "e1.png", caption: "Caption for Image 1" },
+                { image: "e7.png", caption: "Home Page" },
+                { image: "e6.png", caption: "Home Page" },
+                { image: "e5.png", caption: "YouTube Video Comment Analyzer" },
+                { image: "e4.png", caption: "Analysis Report" },
+                { image: "e3.png", caption: "Analysis Report" },
+                { image: "e2.png", caption: "Chatbot" },
+                { image: "e1.png", caption: "Profile page" },
 
               ]}
             />
